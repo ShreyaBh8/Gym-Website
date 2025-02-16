@@ -12,7 +12,8 @@ require("./db/conn");
 const Member = require("./models/members");
 const Booker=require("./models/bookers");
 const { default: isEmail } = require('validator/lib/isEmail');
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 10000;
+
 
 const tempPath = path.join(__dirname, '../templates/hbs');
 const partialPath = path.join(__dirname, '../templates/partials');
