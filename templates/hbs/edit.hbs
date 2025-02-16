@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #58a992;
+            font-family: poppins;
+        }
+
+        .container {
+            height: auto;
+            display: block;
+            padding: 0 30px;
+        }
+
+        @media (max-width: 1029px) {
+            .container {
+                margin: 0 auto;
+            }
+
+            .navbar.open+.container {
+                margin-top: 300px;
+            }
+        }
+
+        .navbar {
+            background-color: #333;
+            justify-content: space-around;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #68c885;
+        }
+
+        .profile-button {
+            background: #028102;
+            box-shadow: none;
+            border: none;
+        }
+
+        .profile-button:hover {
+            background: #046304;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .rounded {
+            margin-top: 7em;
+        }
+
+        h5 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        form{
+            color: #333;
+            font-size: 14px;
+        }
+        .alert .btn-close {
+      background-color: transparent;
+      border: none;
+      font-size: 1rem;
+      color: #333;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .alert .btn-close:hover {
+      opacity: 0.9;
+    }
+    </style>
+</head>
+
+<body>
+    {{>authNav}}
+    {{#if success}}
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Success!</strong> {{success}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              {{/if}}
+
+              {{#if error}}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Failure!</strong> {{error}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              {{/if}}
+    <div class="container rounded bg-white">
+        <div class="row">
+            <div class="col-md-4 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
+                        src="https://static.vecteezy.com/system/resources/previews/013/042/571/non_2x/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg"
+                        width="90"><span class="font-weight-bold">{{fname}}</span><span class="text-black-50">{{useremail}}</span></div>
+            </div>
+            <div class="col-md-8">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="text-right">Edit Profile</h5>
+                    </div>
+                    <form action="/edit" method="post">
+                    <div class="row mt-2">
+                        <div class="col-md-6">Full name :<input type="text" name="name" class="form-control" placeholder="Username" value="{{fname}}"></div>
+                        <div class="col-md-6">Password :<input type="text" name="password" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">Email :<input type="text" name="email" "form-control" placeholder="abc@gmail.com"></div>
+                        <div class="col-md-6">Confirm Password :<input type="text" name="cpassword" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="submit">Save
+                            Changes</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

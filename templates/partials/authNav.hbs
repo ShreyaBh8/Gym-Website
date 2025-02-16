@@ -1,0 +1,20 @@
+<div class="navbar">
+    <div class="logo">
+        FITNESS<span>GYM</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="menu">
+        <a href="/" class="a" >HOME</a>
+        <a href="/book" class="a b" >BOOK SESSION</a>
+        {{#if isBooked}}
+        <a href="/bookdetails" class="a b" >VIEW BOOKINGS</a>
+        {{/if}}
+        <a href="/login" class="login a l" >{{login}}</a>
+        <a href="/edit" class="login a e">Edit Profile</a>
+        {{#if isAuthenticated}}
+        <a href="/logout" class="login a">Logout</a>
+        {{/if}}
+    </div>
+</div>

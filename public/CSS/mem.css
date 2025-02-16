@@ -1,0 +1,305 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1.9rem;
+    
+}
+
+
+h1,h2,h3{
+    font-weight: bolder;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #35a962, #6dd5fa);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+
+header .hero {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.9rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+/* Section */
+.section {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: #f4f4f4;
+}
+
+.bg-dark {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+/* Membership Plans */
+#membership-plans {
+    background-color: #fff;
+}
+
+#membership-plans h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+#membership-plans p {
+    font-size: 1.9rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+.container h3{
+    background-color: transparent;
+    color: #333;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: #ecf0f1;
+    padding: 25px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+}
+
+.plan h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.plan .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.plan ul {
+    margin-bottom: 30px;
+    margin-left: 20px;
+    color: #777777f1;
+}
+
+.plan ul li {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.plan a {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+ .cta-button{
+    margin-bottom: 0;
+}
+
+.plan button:hover {
+    background-color: #27ae60;
+}
+/* Benefits Section */
+#benefits {
+    background-color: #1abc9c;
+    padding: 60px 0;
+}
+
+#benefits h2 {
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#benefits p {
+    font-size: 1.5rem;
+    color: #806e6e;
+   text-align: start;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.benefit {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.benefit h3 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.benefit p {
+    font-size: 2rem;
+    color: #555;
+}
+
+.benefit .icon {
+    font-size: 55px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fbe3e2;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.benefit:hover .icon {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.benefit:hover h3 {
+    color: #e74c3c;
+}
+
+
+/* Testimonials */
+#testimonials .testimonial {
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #333;
+}
+
+#testimonials h2 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: left;
+}
+
+#testimonials h4 {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Sign-up Form */
+form{
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    width: 50%;
+    color: white;
+}
+
+form input,
+form select {
+    width: 50%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+form button {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #34495e;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+@media(max-width:810px){
+    form input,
+form select{
+    width: 100%;
+}
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Success</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+   <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="CSS/mem.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+   
+  <style>
+    *{
+      font-family: poppins;
+    }
+    .navbar {
+      background-color: #333;
+      margin-bottom: 30px;
+      font-family: poppins;
+      justify-content: space-between;
+    }
+    .alert {
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .logo span{
+        font-size: 35px;
+    }
+    .container{
+        display: block;
+        padding: 0;
+        height: auto;
+    }
+    @media (max-width: 1029px){
+        .login{
+            background-color: transparent;
+        }
+        
+    }
+    
+  </style>
+</head>
+
+<body>
+  {{>authNav}}
+  <div class="container">
+    {{#if success}}
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Success!</strong> {{success}}
+    </div>
+    {{/if}}
+  </div>
+  <header>
+        <section class="hero">
+            <h1>Welcome, {{username}}! We're excited to help you achieve your fitness goals.</h1>
+            <p>Join today and become part of a thriving fitness community.</p>
+            <a href="#membership-plans" class="cta-button">View Membership Plans</a>
+        </section>
+    </header>
+
+    <!-- Membership Plans Section -->
+    <section id="membership-plans" class="section">
+        <div class="container">
+            <h2>Choose the Perfect Plan for You</h2>
+            <p>Whether you're just starting out or looking for advanced training, we have a plan for every fitness level.</p>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Basic</h3>
+                    <p class="price">$20 / Month</p>
+                    <ul>
+                        <li>Access to Gym Equipment</li>
+                        <li>Free Fitness Assessment</li>
+                        <li>Basic Workout Classes</li>
+                    </ul>
+                    <a href="#signup" class="cta-button">Join Now</a>
+                </div>
+                <div class="plan featured">
+                    <h3>Premium</h3>
+                    <p class="price">$40 / Month</p>
+                    <ul>
+                        <li>All Basic Plan Features</li>
+                        <li>Access to Group Fitness Classes</li>
+                        <li>1 Personal Training Session</li>
+                        <li>Monthly Progress Tracking</li>
+                    </ul>
+                    <a href="#signup" class="cta-button">Join Now</a>
+                </div>
+                <div class="plan">
+                    <h3>VIP</h3>
+                    <p class="price">$70 / Month</p>
+                    <ul>
+                        <li>All Premium Plan Features</li>
+                        <li>5 Personal Training Sessions</li>
+                        <li>Exclusive VIP Lounge Access</li>
+                        <li>Priority Booking for Classes</li>
+                    </ul>
+                    <a href="#signup" class="cta-button">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section bg-light">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <h3>State-of-the-Art Equipment</h3>
+                    <p>Our gym features top-of-the-line fitness equipment, ensuring you have everything you need to succeed in your fitness journey.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Expert Trainers</h3>
+                    <p>Certified trainers will guide you through personalized workout plans tailored to your goals.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Flexible Hours</h3>
+                    <p>With extended hours and 24/7 access to the gym, you can work out whenever it's convenient for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2>What Our Members Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"I love the trainers at Your Gym! They helped me set and achieve my fitness goals, and I feel stronger than ever!"</p>
+                    <h4>- Emily R.</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"The VIP membership is definitely worth it. I love the personal training sessions and the VIP lounge!"</p>
+                    <h4>- John D.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Form Section -->
+    <section id="signup" class="section bg-dark text-light">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Sign Up Today</h2>
+            <p>Ready to take the first step towards your fitness journey? Fill out the form below to get started!</p>
+            <form action="/submit-membership" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="plan">Select Membership Plan</label>
+                <select id="plan" name="plan" required>
+                    <option value="basic">Basic - $20 / Month</option>
+                    <option value="premium">Premium - $40 / Month</option>
+                    <option value="vip">VIP - $70 / Month</option>
+                </select>
+
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light">
+        <div class="container">
+            <p>&copy; 2025 Your Gym | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="JS/script.js"></script>
+</body>
+</html>

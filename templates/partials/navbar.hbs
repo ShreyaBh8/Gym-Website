@@ -1,0 +1,21 @@
+<div class="navbar">
+    <div class="logo">
+        FITNESS<span>GYM</span>
+    </div>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <!-- Navbar Menu -->
+    <div class="menu">
+        <a href="/" class="a" style="color: #09ea09;">HOME</a>
+        <a href="#about" class="a">ABOUT</a>
+        <a href="#classes" class="a">CLASSES</a>
+        <a href="#schedule" class="a">SCHEDULES</a>
+        <a href="#contact" class="a">CONTACT</a>
+        <a href="/login" class="login a">{{login}}</a>
+        {{#if isAuthenticated}}
+        <a href="/logout" class="login a">Logout</a>
+        {{/if}}
+    </div>
+</div>
